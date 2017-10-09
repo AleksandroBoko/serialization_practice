@@ -34,5 +34,10 @@ namespace Serialization_Practise.BusinessLogic
         {
             MemoryStorage.Pupils = pupilAccess.GetPupils();
         }
+
+        public IEnumerable<Pupil> GetPupilByName(string name)
+        {
+            return MemoryStorage.Pupils.Where(pupil => pupil.Name.Equals(name));
+        }
     }
 }

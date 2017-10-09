@@ -12,5 +12,6 @@ namespace Serialization_Practise.BusinessLogic
         void AddPupil(Pupil pupil);
         //void RemoveUser();
         void SavePupil();
+        IEnumerable<Pupil> GetPupilByName(string name);
     }
 }

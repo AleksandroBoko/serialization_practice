@@ -12,5 +12,6 @@ namespace Serialization_Practise.BusinessLogic
         void AddCourse(Course pupil);
         //void RemoveUser();
         void SaveCourse();
+        IEnumerable<Course> GetCoursesByName(string name);
     }
 }

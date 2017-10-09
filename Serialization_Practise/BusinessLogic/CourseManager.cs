@@ -13,8 +13,14 @@ namespace Serialization_Practise.BusinessLogic
     {
         ICourseDataAccess courseAccess;
 
+        public CourseManager() 
+        {
+            courseAccess = new CourseDataAccess();
+        }
+
         public void AddCourse(Course course)
         {
+
             MemoryStorage.Courses.Add(course);
         }
 
@@ -26,6 +32,11 @@ namespace Serialization_Practise.BusinessLogic
         public void GetCourses()
         {
             MemoryStorage.Courses = courseAccess.GetCourses();
+        }
+
+        public IEnumerable<Course> GetCoursesByName(string name)
+        {
+            return MemoryStorage.Courses.Where(course => course.Name.Equals(name));
         }
 
     }

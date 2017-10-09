@@ -16,7 +16,7 @@ namespace Serialization_Practise.DataAccess
         {
             DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Course>));
 
-            using (FileStream fs = new FileStream("C://Courses.json",FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("D://Courses.json",FileMode.OpenOrCreate))
             {
                 jsonFormatter.WriteObject(fs, courses);
             }
@@ -26,7 +26,7 @@ namespace Serialization_Practise.DataAccess
         {
             DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Course>));
 
-            using (FileStream fs = new FileStream("C://Courses.json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("D://Courses.json", FileMode.OpenOrCreate))
             {
                 return (List<Course>)jsonFormatter.ReadObject(fs);
             }

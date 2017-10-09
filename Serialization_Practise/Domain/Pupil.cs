@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Serialization_Practise.Domain
 {
     [DataContract]
-    class Pupil
+    public class Pupil
     {
         [DataMember]
         public string Name { get; set; }
